@@ -23,5 +23,10 @@ peer: 0123456789abcdef0123456789abcdef0123456789a=
   transfer: 84.60 MiB received, 94.05 MiB sent
 ```
 
+# Adding unknown peers to peers file
+If you run `wgg.sh -u`, all unknown peers will be added to `/etc/wireguard/peers`.
+
+You will be prompted to enter a friendly name for each new peer found.
+
 # Compatibility note
 The script was made using bash v4.4.20 and have not been tested on any other shells.
