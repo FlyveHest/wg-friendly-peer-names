@@ -5,7 +5,13 @@ WGCOMMAND=`which wg`
 
 # Make sure peer file exists
 if [[ ! -f "$PEERFILE" ]]; then
-  touch "$PEERFILE"
+  touch "$PEERFILE" 2>/dev/null
+
+  if [[ "$?" != "0" ]]; then
+    echo "Peer file $PEERFILE is not accesible by your user"
+
+    exit 0
+  fi
 fi
 
 function updatePeerFile() {
