@@ -89,7 +89,7 @@ function showConfiguration() {
 # $1: text, $2 richoutput, $3 print linebreak
 function echoLine() {
   # Strip any newline characters
-  local OUTPUTLINE=$(printf '%s' "$1" | sed -z '$ s/\[\r\n]$//')
+  local OUTPUTLINE=$(printf '%s' "$1" | sed '$ s/\[\r\n]$//')
 
   # If not rich output, strip ANSI control codes
   if [[ $2 -eq 0 ]]; then
