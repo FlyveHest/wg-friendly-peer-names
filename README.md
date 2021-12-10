@@ -30,3 +30,7 @@ You will be prompted to enter a friendly name for each new peer found.
 
 # Compatibility note
 The script was made using bash v4.4.20 and have not been tested on any other shells.
+
+## Alpine Linux note
+Alpine needs `util-linux` and `ncurses` for this script to run. (Thanks @JPlanche)
+
